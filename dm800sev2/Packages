@@ -220,8 +220,8 @@ Depends: dreambox-secondstage-dm800sev2, kernel-3.2-dm800sev2
 Section: base
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: c2fd8fd19cbfc85486234ac257f7b96c
-SHA256sum: 5677be71b4664ac6a8b2e763f8b7ef75a518854f998a7cc2a93d09ef1514bf3d
+MD5Sum: c0311f03f32e99850b8f56cca6412dcd
+SHA256sum: ceeae96ab93e8ba0c96ba4601fa6ef0c60801046a9aa52792328ffca171ed6cd
 Size: 2176494
 Filename: dreambox-dvb-modules-dm800sev2_3.2-20151201-r0_dm800sev2.ipk
 Source: dreambox-dvb-modules-dm800sev2_3.2-20151201.bb
@@ -236,9 +236,9 @@ Depends: mtd-utils
 Section: base
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: 177507203b1f23b46d7d2ae35387387a
-SHA256sum: 127184876e2b46f07f8bebfeba7b1bd7c756fbec643714b3e48d6c6089920fec
-Size: 143970
+MD5Sum: f346cb0bda163cabcba0e8c0c0fc8bb2
+SHA256sum: 5c85b348d6257e82a27df587c3374d3f0cc703b64279885ac759af92f89c2cb6
+Size: 144054
 Filename: dreambox-secondstage-dm800sev2_89-r0_dm800sev2.ipk
 Source: dreambox-secondstage-dm800sev2_89.bb
 Description: Dreambox second stage bootloader
@@ -246,15 +246,45 @@ OE: dreambox-secondstage-dm800sev2
 License: CLOSED
 Priority: required
 
+Package: enigma2-display-skins-meta
+Version: git281+2c3bd10-r0
+Section: base
+Architecture: dm800sev2
+Maintainer: oe-aliance
+MD5Sum: b874eae7ad6f744957c605b5db802a7f
+SHA256sum: 196ea40aabe40409690ed10efc8a024f652bb123a97fbcfd3ea422d6eb5dd264
+Size: 1416
+Filename: enigma2-display-skins-meta_git281+2c3bd10-r0_dm800sev2.ipk
+Source: enigma2-display-skins.bb
+Description: Display Skins for Enigma2
+OE: enigma2-display-skins
+License: Proprietary
+Priority: optional
+
+Package: enigma2-display-skins
+Version: git281+2c3bd10-r0
+Section: base
+Architecture: dm800sev2
+Maintainer: oe-aliance
+MD5Sum: c837b70d39366f36cd6b8a6dcac1c3ed
+SHA256sum: 155451c5b2d9117990f134d7f2c97bf79d3c2f021749efb157350244e8a8aa7b
+Size: 590
+Filename: enigma2-display-skins_git281+2c3bd10-r0_dm800sev2.ipk
+Source: enigma2-display-skins.bb
+Description: Display Skins for Enigma2
+OE: enigma2-display-skins
+License: Proprietary
+Priority: optional
+
 Package: enigma2-module-dbg
-Version: 20220711-r0
+Version: 20220712-r0
 Section: devel
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: 7d2a288ba3a261ced21a8c399747de13
-SHA256sum: 8964d369911e8405d4bacfb69108d10f24949e808e749e1aa87441b034c3bf3b
+MD5Sum: e087a263707dded6123c790b636d05c4
+SHA256sum: 729b4258b33e3d064ded46e23dea3e51778f2b8b967e61d561b6e80b1cec0be4
 Size: 686
-Filename: enigma2-module-dbg_20220711-r0_dm800sev2.ipk
+Filename: enigma2-module-dbg_20220712-r0_dm800sev2.ipk
 Source: enigma2-module.bb
 Description: Enigma kernel information module for dm800sev2 - Debugging files
 OE: enigma2-module
@@ -262,16 +292,16 @@ License: GPLv3
 Priority: required
 
 Package: enigma2-module-dev
-Version: 20220711-r0
-Depends: enigma2-module (= 20220711-r0)
+Version: 20220712-r0
+Depends: enigma2-module (= 20220712-r0)
 Recommends: kernel-3.2-dm800sev2-dev, kernel-module-enigma-3.2-dm800sev2-dev
 Section: devel
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: 505a57177cf062f0471b98e506e81b4b
-SHA256sum: a1a41473fed13bf4ff490f00cacd6a1cf504cd8e735281ab5b823fef0c7c56aa
+MD5Sum: a453065776f4bd898cf78632c25ac245
+SHA256sum: ffd2133d6c06c5d2538540f731c9a0341011c025d0f9e5d12f0577b765adabc8
 Size: 744
-Filename: enigma2-module-dev_20220711-r0_dm800sev2.ipk
+Filename: enigma2-module-dev_20220712-r0_dm800sev2.ipk
 Source: enigma2-module.bb
 Description: Enigma kernel information module for dm800sev2 - Development files
 OE: enigma2-module
@@ -279,67 +309,341 @@ License: GPLv3
 Priority: required
 
 Package: enigma2-module
-Version: 20220711-r0
+Version: 20220712-r0
 Depends: kernel-module-enigma-3.2-dm800sev2
 Section: base
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: 782d0621b1b0f3c007b068c543ec1ab3
-SHA256sum: 87c2183e87a4bf9c587a95ba7cbf93ec51cb152af582f34feb59653478c86016
-Size: 1404
-Filename: enigma2-module_20220711-r0_dm800sev2.ipk
+MD5Sum: b7153cea3948b745cf8f487aed5c6566
+SHA256sum: 3bd1b61627c21c27f40d6bd42ab9ee7e733e1776176978b6d4384284480ad416
+Size: 1408
+Filename: enigma2-module_20220712-r0_dm800sev2.ipk
 Source: enigma2-module.bb
 Description: Enigma kernel information module for dm800sev2
 OE: enigma2-module
 License: GPLv3
 Priority: required
 
+Package: enigma2-plugin-display-lcdskin-1
+Version: git281+2c3bd10-r0
+Depends: enigma2-display-skins
+Section: base
+Architecture: dm800sev2
+Maintainer: oe-aliance
+MD5Sum: ad709a739e8aec7ff193863f20526d4e
+SHA256sum: 5282ec57fe0b6301e64b2a0b49bc6ecdf8247351378eb6be8aefe6f67ab46cae
+Size: 87168
+Filename: enigma2-plugin-display-lcdskin-1_git281+2c3bd10-r0_dm800sev2.ipk
+Source: enigma2-display-skins.bb
+Description: Enigma2 Display Skin: lcdskin-1
+OE: enigma2-display-skins
+License: Proprietary
+Priority: optional
+
+Package: enigma2-plugin-display-lcdskin-2
+Version: git281+2c3bd10-r0
+Depends: enigma2-display-skins
+Section: base
+Architecture: dm800sev2
+Maintainer: oe-aliance
+MD5Sum: dc5c7686b7ef2a3346536a322ea08ec8
+SHA256sum: 5ec30b6afe77cc496e9fc8bc89847354381db56473cbdfc083144ebf5120e4ae
+Size: 69680
+Filename: enigma2-plugin-display-lcdskin-2_git281+2c3bd10-r0_dm800sev2.ipk
+Source: enigma2-display-skins.bb
+Description: Enigma2 Display Skin: lcdskin-2
+OE: enigma2-display-skins
+License: Proprietary
+Priority: optional
+
 Package: enigma2-plugin-extensions-openwebif-dbg
-Version: git4444+83b56e2-r0
+Version: git4446+d8b923e-r0
 Section: devel
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: 8ad999b43463ae485ea1a1ffe6170b89
-SHA256sum: 1377c406acde51d5e9116412ed662a8fa5feace2508ef19b57037398c0f5915c
+MD5Sum: 0f66599669bd90364787b019ec158700
+SHA256sum: 7c53e2f8eb72eabe04448258e6023a2a93379418ef95bd6022b77b0d4a92fa1b
 Size: 726
-Filename: enigma2-plugin-extensions-openwebif-dbg_git4444+83b56e2-r0_dm800sev2.ipk
+Filename: enigma2-plugin-extensions-openwebif-dbg_git4446+d8b923e-r0_dm800sev2.ipk
 Source: enigma2-plugin-extensions-openwebif.bb
-Description: enigma2-plugin-extensions-openwebif version gitAUTOINC+83b56e2c3d-r0 - Debugging files
+Description: enigma2-plugin-extensions-openwebif version gitAUTOINC+d8b923e03a-r0 - Debugging files
 OE: enigma2-plugin-extensions-openwebif
 License: GPLv2
 Priority: optional
 
 Package: enigma2-plugin-extensions-openwebif-dev
-Version: git4444+83b56e2-r0
-Depends: enigma2-plugin-extensions-openwebif (= git4444+83b56e2-r0)
+Version: git4446+d8b923e-r0
+Depends: enigma2-plugin-extensions-openwebif (= git4446+d8b923e-r0)
 Recommends: aio-grab-dev, python-cheetah-dev, python-compression-dev, python-core-dev, python-dev, python-ipaddress-dev, python-json-dev, python-misc-dev, python-numbers-dev, python-pyopenssl-dev, python-shell-dev, python-six-dev, python-unixadmin-dev
 Section: devel
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: 3f0b98e4d034dc4037fb4d0f9add15ea
-SHA256sum: b5dd0a3e148e44deaa9fbf564b5ded08eea3596e0a208dea1f356df60fb1ecc3
-Size: 844
-Filename: enigma2-plugin-extensions-openwebif-dev_git4444+83b56e2-r0_dm800sev2.ipk
+MD5Sum: 27d568e67144b1a3d43c4ef701813d62
+SHA256sum: 5118297fd2deed6152c2bfb468c372103247a87fad9e69871e8219ac26fae0d0
+Size: 846
+Filename: enigma2-plugin-extensions-openwebif-dev_git4446+d8b923e-r0_dm800sev2.ipk
 Source: enigma2-plugin-extensions-openwebif.bb
-Description: enigma2-plugin-extensions-openwebif version gitAUTOINC+83b56e2c3d-r0 - Development files
+Description: enigma2-plugin-extensions-openwebif version gitAUTOINC+d8b923e03a-r0 - Development files
 OE: enigma2-plugin-extensions-openwebif
 License: GPLv2
 Priority: optional
 
 Package: enigma2-plugin-extensions-openwebif
-Version: git4444+83b56e2-r0
+Version: git4446+d8b923e-r0
 Depends: aio-grab, python-cheetah, python-compression, python-core, python-ipaddress, python-json, python-misc, python-numbers, python-pyopenssl, python-shell, python-six, python-unixadmin
 Provides: enigma2-plugin-extensions-openwebif-terminal
 Section: base
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: a96f23ca2aa6527e80696e2464ecd3ce
-SHA256sum: e0da9ad550b3bcbfc7a26ca674e721b0b322512c02c62b0921c8adc1b96d136b
-Size: 2966952
-Filename: enigma2-plugin-extensions-openwebif_git4444+83b56e2-r0_dm800sev2.ipk
+MD5Sum: 6766caa5dfce83ad2a9f1cdef4a6d9cb
+SHA256sum: 7946c1bbf69f395591bb6fc8eac19dda7bb647496ff320c70f3a904d6bd3d1da
+Size: 2966680
+Filename: enigma2-plugin-extensions-openwebif_git4446+d8b923e-r0_dm800sev2.ipk
 Source: enigma2-plugin-extensions-openwebif.bb
-Description: enigma2-plugin-extensions-openwebif version gitAUTOINC+83b56e2c3d-r0
+Description: enigma2-plugin-extensions-openwebif version gitAUTOINC+d8b923e03a-r0
 OE: enigma2-plugin-extensions-openwebif
+License: GPLv2
+Priority: optional
+
+Package: enigma2-plugin-extensions-screenposition-dbg
+Version: 2.0+git10+025fa1e-r1
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: d319cf47de42360cb59c0e7c05462117
+SHA256sum: 5b9d298e518c1639b50f0d25e48e00c1cb46e541c54ed97cbe1463cbe71c80e1
+Size: 722
+Filename: enigma2-plugin-extensions-screenposition-dbg_2.0+git10+025fa1e-r1_dm800sev2.ipk
+Source: enigma2-plugin-extensions-screenposition.bb
+Description: enigma2-plugin-extensions-screenposition version 2.0+gitAUTOINC+025fa1e42a-r1 - Debugging files
+OE: enigma2-plugin-extensions-screenposition
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-extensions-screenposition-dev
+Version: 2.0+git10+025fa1e-r1
+Depends: enigma2-plugin-extensions-screenposition (= 2.0+git10+025fa1e-r1)
+Recommends: python-core-dev, python-dev
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 975a03ac9a6530b95cd1cb5f16cb2b13
+SHA256sum: fa4c69a731eb506f253253788a0b3e43e906e058d28c1087797d6271ccef09c7
+Size: 774
+Filename: enigma2-plugin-extensions-screenposition-dev_2.0+git10+025fa1e-r1_dm800sev2.ipk
+Source: enigma2-plugin-extensions-screenposition.bb
+Description: enigma2-plugin-extensions-screenposition version 2.0+gitAUTOINC+025fa1e42a-r1 - Development files
+OE: enigma2-plugin-extensions-screenposition
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-extensions-screenposition-src
+Version: 2.0+git10+025fa1e-r1
+Depends: enigma2-plugin-extensions-screenposition
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 10ae53ef5ce372b37da7763fcb74b172
+SHA256sum: 38e3a5360e31735e311fef8524b378d0d8d0856826e2bb1677da2ad5cb03bbf4
+Size: 2272
+Filename: enigma2-plugin-extensions-screenposition-src_2.0+git10+025fa1e-r1_dm800sev2.ipk
+Source: enigma2-plugin-extensions-screenposition.bb
+Description: enigma2-plugin-extensions-screenposition version 2.0+gitAUTOINC+025fa1e42a-r1 - Source files
+OE: enigma2-plugin-extensions-screenposition
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-extensions-screenposition
+Version: 2.0+git10+025fa1e-r1
+Depends: python-core
+Replaces: enigma2-plugin-pli-screenposition
+Conflicts: enigma2-plugin-pli-screenposition
+Section: base
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: d8e155003d653b97f69aea149bb97657
+SHA256sum: a5ae5031f600ee7b38bb66cfb7bfac35f26d58e44526edf0f842a9814b4ca1ae
+Size: 3026
+Filename: enigma2-plugin-extensions-screenposition_2.0+git10+025fa1e-r1_dm800sev2.ipk
+Source: enigma2-plugin-extensions-screenposition.bb
+Description: enigma2-plugin-extensions-screenposition version 2.0+gitAUTOINC+025fa1e42a-r1
+OE: enigma2-plugin-extensions-screenposition
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-extensions-shootyourscreen-dbg
+Version: 0.2+git20+d27a15e-r0
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: d4eb5b2f6d24185f789a6d9d2a3706b6
+SHA256sum: a94728085d18c98a50569f9302bb1a3f3dc5e7ac0fdd71595bb1910cc7a7c4c9
+Size: 738
+Filename: enigma2-plugin-extensions-shootyourscreen-dbg_0.2+git20+d27a15e-r0_dm800sev2.ipk
+Source: enigma2-plugin-extensions-shootyourscreen.bb
+Description: enigma2-plugin-extensions-shootyourscreen version 0.2+gitAUTOINC+d27a15e2d1-r0 - Debugging files
+OE: enigma2-plugin-extensions-shootyourscreen
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-extensions-shootyourscreen-dev
+Version: 0.2+git20+d27a15e-r0
+Depends: enigma2-plugin-extensions-shootyourscreen (= 0.2+git20+d27a15e-r0)
+Recommends: aio-grab-dev, python-core-dev, python-dev
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 4e8f48e8907e469f9726549dec3f7fbd
+SHA256sum: 4adb86500003aa9c10054033414fb99509d76924653901926e7f2374af4334ab
+Size: 796
+Filename: enigma2-plugin-extensions-shootyourscreen-dev_0.2+git20+d27a15e-r0_dm800sev2.ipk
+Source: enigma2-plugin-extensions-shootyourscreen.bb
+Description: enigma2-plugin-extensions-shootyourscreen version 0.2+gitAUTOINC+d27a15e2d1-r0 - Development files
+OE: enigma2-plugin-extensions-shootyourscreen
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-extensions-shootyourscreen-src
+Version: 0.2+git20+d27a15e-r0
+Depends: enigma2-plugin-extensions-shootyourscreen
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 6f42b559fc53bb7fa83a6fecc5f0cae7
+SHA256sum: 3c1a87c9a6fc94ace91274e7390360899d23842fdb5688cb83589385dd7c23a0
+Size: 4258
+Filename: enigma2-plugin-extensions-shootyourscreen-src_0.2+git20+d27a15e-r0_dm800sev2.ipk
+Source: enigma2-plugin-extensions-shootyourscreen.bb
+Description: enigma2-plugin-extensions-shootyourscreen version 0.2+gitAUTOINC+d27a15e2d1-r0 - Source files
+OE: enigma2-plugin-extensions-shootyourscreen
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-extensions-shootyourscreen
+Version: 0.2+git20+d27a15e-r0
+Depends: aio-grab, python-core
+Section: base
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: ccdfcb7765a00e2847ff4e3950efde50
+SHA256sum: c159a8346c42fc401143ddf1fab3cf76e088324e976ff3f796de877cf3faf2d5
+Size: 9298
+Filename: enigma2-plugin-extensions-shootyourscreen_0.2+git20+d27a15e-r0_dm800sev2.ipk
+Source: enigma2-plugin-extensions-shootyourscreen.bb
+Description: enigma2-plugin-extensions-shootyourscreen version 0.2+gitAUTOINC+d27a15e2d1-r0
+OE: enigma2-plugin-extensions-shootyourscreen
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-systemplugins-autoshutdown-dbg
+Version: 0.6+git47+1a190ec-r0
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 9822341bf4d9fbc5b993b782b2b7fc96
+SHA256sum: 169f31052aa53649f5fc6987dbbac3b6b0582d2632f18eb3f02d33a1295e9a18
+Size: 728
+Filename: enigma2-plugin-systemplugins-autoshutdown-dbg_0.6+git47+1a190ec-r0_dm800sev2.ipk
+Source: enigma2-plugin-systemplugins-autoshutdown.bb
+Description: enigma2-plugin-systemplugins-autoshutdown version 0.6+gitAUTOINC+1a190ec7a7-r0 - Debugging files
+OE: enigma2-plugin-systemplugins-autoshutdown
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-systemplugins-autoshutdown-dev
+Version: 0.6+git47+1a190ec-r0
+Depends: enigma2-plugin-systemplugins-autoshutdown (= 0.6+git47+1a190ec-r0)
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 129fe61b98772e170375022b27c79eb9
+SHA256sum: f75d0d07ba2c8c123a5bf79f8a6e68ec633f8944c2a3dd146150e2a28c2bfe6c
+Size: 756
+Filename: enigma2-plugin-systemplugins-autoshutdown-dev_0.6+git47+1a190ec-r0_dm800sev2.ipk
+Source: enigma2-plugin-systemplugins-autoshutdown.bb
+Description: enigma2-plugin-systemplugins-autoshutdown version 0.6+gitAUTOINC+1a190ec7a7-r0 - Development files
+OE: enigma2-plugin-systemplugins-autoshutdown
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-systemplugins-autoshutdown-src
+Version: 0.6+git47+1a190ec-r0
+Depends: enigma2-plugin-systemplugins-autoshutdown
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 06baf36fec3c5144ee139ecddedcc601
+SHA256sum: a388cb66146b6900e93982bb4b65b4de25456a9060a037098f22cae16dd035d9
+Size: 6040
+Filename: enigma2-plugin-systemplugins-autoshutdown-src_0.6+git47+1a190ec-r0_dm800sev2.ipk
+Source: enigma2-plugin-systemplugins-autoshutdown.bb
+Description: enigma2-plugin-systemplugins-autoshutdown version 0.6+gitAUTOINC+1a190ec7a7-r0 - Source files
+OE: enigma2-plugin-systemplugins-autoshutdown
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-systemplugins-autoshutdown
+Version: 0.6+git47+1a190ec-r0
+Section: base
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: bc9cab0c394c57b656ad3ccffa973824
+SHA256sum: 988f5bd234020b082db18c7b7478c7e2e100ef0c0df3d891de803ff70335a122
+Size: 21070
+Filename: enigma2-plugin-systemplugins-autoshutdown_0.6+git47+1a190ec-r0_dm800sev2.ipk
+Source: enigma2-plugin-systemplugins-autoshutdown.bb
+Description: enigma2-plugin-systemplugins-autoshutdown version 0.6+gitAUTOINC+1a190ec7a7-r0
+OE: enigma2-plugin-systemplugins-autoshutdown
+License: GPLv2+
+Priority: optional
+
+Package: enigma2-plugin-systemplugins-serviceapp-dbg
+Version: git176+947f62e-r0
+Recommends: glibc-dbg, libcrypto-dbg, libgcc-dbg, libssl-dbg, libstdc++-dbg, uchardet-dbg
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 17b7040ddceaadb18f3bca6b51cf52ef
+SHA256sum: 9cd184956838b23760c361ec2762ff2ae3fca02fbd095f3279db41ad1aa76b93
+Size: 1618132
+Filename: enigma2-plugin-systemplugins-serviceapp-dbg_git176+947f62e-r0_dm800sev2.ipk
+Source: enigma2-plugin-systemplugins-serviceapp_0.5.bb
+Description: enigma2-plugin-systemplugins-serviceapp version gitAUTOINC+947f62ed5c-r0 - Debugging files
+OE: enigma2-plugin-systemplugins-serviceapp
+License: GPLv2
+Priority: optional
+
+Package: enigma2-plugin-systemplugins-serviceapp-dev
+Version: git176+947f62e-r0
+Depends: enigma2-plugin-systemplugins-serviceapp (= git176+947f62e-r0)
+Recommends: enigma2-dev, glibc-dev, libcrypto-dev, libgcc-dev, libssl-dev, libstdc++-dev, openssl-dev, python-json-dev, uchardet-dev
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 96c12c63231f0941ae47bb0813d38ecd
+SHA256sum: 3f0a51b6f2769fcf82a4e8fd8d4aa6dfbe44238d60fcc2ff810072581e460009
+Size: 5614
+Filename: enigma2-plugin-systemplugins-serviceapp-dev_git176+947f62e-r0_dm800sev2.ipk
+Source: enigma2-plugin-systemplugins-serviceapp_0.5.bb
+Description: enigma2-plugin-systemplugins-serviceapp version gitAUTOINC+947f62ed5c-r0 - Development files
+OE: enigma2-plugin-systemplugins-serviceapp
+License: GPLv2
+Priority: optional
+
+Package: enigma2-plugin-systemplugins-serviceapp
+Version: git176+947f62e-r0
+Depends: enigma2, libc6 (>= 2.33), libcrypto1.1 (>= 1.1.1k), libgcc1 (>= 11.1.0), libssl1.1 (>= 1.1.1k), libstdc++6 (>= 11.1.0), openssl, python-json, uchardet (>= 0.0.7)
+Recommends: exteplayer3, gstplayer
+Section: base
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: e07521a1e8ea8d1001a29e14b8b668b0
+SHA256sum: ef9c199b94b2cd2d255028b830f12a25b8fc391e5980f68230b1b8496bd23b1e
+Size: 132862
+Filename: enigma2-plugin-systemplugins-serviceapp_git176+947f62e-r0_dm800sev2.ipk
+Source: enigma2-plugin-systemplugins-serviceapp_0.5.bb
+Description: enigma2-plugin-systemplugins-serviceapp version gitAUTOINC+947f62ed5c-r0
+OE: enigma2-plugin-systemplugins-serviceapp
 License: GPLv2
 Priority: optional
 
@@ -3423,16 +3727,16 @@ License: GPLv2
 Priority: optional
 
 Package: kernel-module-enigma-3.2-dm800sev2
-Version: 20220711-r0
+Version: 20220712-r0
 Depends: kernel-3.2-dm800sev2
 Provides: kernel-module-enigma
 Section: base
 Architecture: dm800sev2
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-MD5Sum: f25082ea73df816054a89f8b4d884a66
-SHA256sum: f15df18fc4f6aed4e8355f95ca6eb1b0623c1e52c877b601e060c9f6e1299a1f
-Size: 6798
-Filename: kernel-module-enigma-3.2-dm800sev2_20220711-r0_dm800sev2.ipk
+MD5Sum: 7d0f54cce9feb275bc8341acd4f8aec5
+SHA256sum: 4953b1ad949df7a75bf9a03a721fc4d85691dcf3a7167ca22e388b08358591a0
+Size: 6816
+Filename: kernel-module-enigma-3.2-dm800sev2_20220712-r0_dm800sev2.ipk
 Source: enigma2-module.bb
 Description: enigma kernel module
 OE: enigma2-module
@@ -13605,9 +13909,9 @@ Recommends: glibc-dbg
 Section: devel
 Architecture: dm800sev2
 Maintainer: oe-alliance team
-MD5Sum: 6a80ad97ddcb6788360a63d720cd0f55
-SHA256sum: 56978393552cf8b44ddb2cdb7288fc8ec653a309a6aa25dd4211f9cca800faa7
-Size: 63620
+MD5Sum: 00c36fdc4788141e05f136544b7f6956
+SHA256sum: fb467b2c7b39b60c239426d48e7bd1c95c594f47772591b55b66c178774e4cd2
+Size: 63360
 Filename: oe-alliance-branding-dbg_git1023+cf96b65-r0_dm800sev2.ipk
 Source: oe-alliance-branding.bb
 Description: oe-alliance-branding version gitAUTOINC+cf96b657d3-r0 - Debugging files
@@ -13622,8 +13926,8 @@ Recommends: glibc-dev, python-dev
 Section: devel
 Architecture: dm800sev2
 Maintainer: oe-alliance team
-MD5Sum: c1ddbe87d8d485a9cdbd9f6cfcb46681
-SHA256sum: f17e742d8cff55498ff18b3ccf55074343a31cfbb55a19fe73ffef834515fd77
+MD5Sum: a23b4b965e9f75b1f76e4aebbb398801
+SHA256sum: fd5311eee7ca88e2e67c6cdca6147a32770013de9d53dcab9b14d89a60ee7a3b
 Size: 732
 Filename: oe-alliance-branding-dev_git1023+cf96b65-r0_dm800sev2.ipk
 Source: oe-alliance-branding.bb
@@ -13638,14 +13942,63 @@ Depends: libc6 (>= 2.33)
 Section: base
 Architecture: dm800sev2
 Maintainer: oe-alliance team
-MD5Sum: ef5872430dd68a77ca979e43d2177b7c
-SHA256sum: 3ab36a2f69626f83598431ae5d17ff9644544329f825434d0a5179bdd3e26379
-Size: 5698
+MD5Sum: b491455635e63614b687fc6bd61d88cc
+SHA256sum: ab93434efda0f47446a75077a63002067d57d01d6e9fa24e4b744a05be7883ac
+Size: 5700
 Filename: oe-alliance-branding_git1023+cf96b65-r0_dm800sev2.ipk
 Source: oe-alliance-branding.bb
 Description: oe-alliance-branding version gitAUTOINC+cf96b657d3-r0
 OE: oe-alliance-branding
 License: GPLv2+
+Priority: optional
+
+Package: openmultiboot-dbg
+Version: 1.0+git110+315c094-r0
+Recommends: freetype-dbg, glibc-dbg
+Section: devel
+Architecture: dm800sev2
+Maintainer: oe-alliance
+MD5Sum: c1e8c07e5f6d2d89320d1c62e83e14c8
+SHA256sum: 51017747a10816c6aa9a27812edea4aea535fa5d11bccd1f380e7679087b5507
+Size: 42240
+Filename: openmultiboot-dbg_1.0+git110+315c094-r0_dm800sev2.ipk
+Source: openmultiboot.bb
+Description: Multi boot loader for enigma2 - Debugging files
+OE: openmultiboot
+License: GPLv2
+Priority: optional
+
+Package: openmultiboot-dev
+Version: 1.0+git110+315c094-r0
+Depends: openmultiboot (= 1.0+git110+315c094-r0)
+Recommends: freetype-dev, glibc-dev, json-c-dev
+Section: devel
+Architecture: dm800sev2
+Maintainer: oe-alliance
+MD5Sum: 7a6471515ccbf6afe042ff86d67f9ee8
+SHA256sum: 35a9d91cd340bffc650e42407e3c3db274935d8a24a61a253cc4ec361b6cfd46
+Size: 716
+Filename: openmultiboot-dev_1.0+git110+315c094-r0_dm800sev2.ipk
+Source: openmultiboot.bb
+Description: Multi boot loader for enigma2 - Development files
+OE: openmultiboot
+License: GPLv2
+Priority: optional
+
+Package: openmultiboot
+Version: 1.0+git110+315c094-r0
+Depends: libc6 (>= 2.33), libfreetype6 (>= 2.10.4)
+Section: base
+Architecture: dm800sev2
+Maintainer: oe-alliance
+MD5Sum: db18e19f17995edec1b62eb7561d70fb
+SHA256sum: 84e5a8d5593808efdbcb5281db0bbf2ccbb6ecdbd2c86f9969184d41bbb0348b
+Size: 40260
+Filename: openmultiboot_1.0+git110+315c094-r0_dm800sev2.ipk
+Source: openmultiboot.bb
+Description: Multi boot loader for enigma2
+OE: openmultiboot
+License: GPLv2
 Priority: optional
 
 Package: openpli-bootlogo-dbg
@@ -14324,6 +14677,56 @@ Source: packagegroup-base.bb
 Description: Extra packages required to fully support dm800sev2 hardware
 OE: packagegroup-base
 License: MIT
+Priority: optional
+
+Package: satipclient-dbg
+Version: 1.0+git87+ad94c73-r0
+Recommends: glibc-dbg, libgcc-dbg, libstdc++-dbg
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 037470ffe56e91499d823ecaf2f97c5a
+SHA256sum: 53124cf08ed1b643d8b2310c9c36db4bdacb4fc5a451e61da13a7da2367f29e0
+Size: 302470
+Filename: satipclient-dbg_1.0+git87+ad94c73-r0_dm800sev2.ipk
+Source: satipclient.bb
+Description: satip client using vtuner - Debugging files
+OE: satipclient
+License: GPLv2
+Priority: optional
+
+Package: satipclient-dev
+Version: 1.0+git87+ad94c73-r0
+Depends: satipclient (= 1.0+git87+ad94c73-r0)
+Recommends: glibc-dev, initscripts-dev, libgcc-dev, libstdc++-dev, update-rc.d-dev
+Section: devel
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: dcfb514a44e81ec405e52100349a218c
+SHA256sum: 0095f25a103b6f86af11d9ceb781f8a2ef0cc456e405875ac80e9f1d3e51ff90
+Size: 756
+Filename: satipclient-dev_1.0+git87+ad94c73-r0_dm800sev2.ipk
+Source: satipclient.bb
+Description: satip client using vtuner - Development files
+OE: satipclient
+License: GPLv2
+Priority: optional
+
+Package: satipclient
+Version: 1.0+git87+ad94c73-r0
+Depends: libc6 (>= 2.33), libgcc1 (>= 11.1.0), libstdc++6 (>= 11.1.0)
+Recommends: update-rc.d
+Section: base
+Architecture: dm800sev2
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+MD5Sum: 08a0529aecbc5abf79f4fd4d1a6a9266
+SHA256sum: 479182992054b352abadd71eec18f3d4c23e53c4f02a86bb887ccfca32b689bf
+Size: 34858
+Filename: satipclient_1.0+git87+ad94c73-r0_dm800sev2.ipk
+Source: satipclient.bb
+Description: satip client using vtuner
+OE: satipclient
+License: GPLv2
 Priority: optional
 
 Package: shadow-securetty-dbg
